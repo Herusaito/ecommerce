@@ -306,8 +306,7 @@ class User extends Model
 	public static function getPasswordHash($password)
 	{
 		return password_hash($password, PASSWORD_DEFAULT, ['cost'=>12]);
-	}
-	
+	}	
 }
 
 ?>
