@@ -197,6 +197,16 @@ class Cart extends Model
 		}
 	}
 
+	public function checkZipCode()
+	{
+	   $products = $this->getProducts();
+	   if (!count($products) > 0) 
+	   {
+	        $this->setdeszipcode('');
+	        $this->setvlfreight(0);
+	   }
+	}
+
 	public static function formatValueToDecimal($value):float
 	{
 		$value = str_replace('.', '', $value);
